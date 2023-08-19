@@ -1,6 +1,6 @@
 # Poke Search
 
-A pokedex in your browser with [Vue](https://vuejs.org/) and [PokeAPI](https://pokeapi.co/)
+A pokedex in your browser made with [Vue](https://vuejs.org/) using [PokeAPI](https://pokeapi.co/)
 
 # Running The Project
 
