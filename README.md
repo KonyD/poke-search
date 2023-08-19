@@ -1,3 +1,3 @@
 # Poke Search
 
-a pokedex in your browser
+A pokedex in your browser
