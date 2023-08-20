@@ -2,7 +2,8 @@
 import { ref } from "vue";
 import { PokemonClient } from "pokenode-ts";
 
-let name = ref("");
+let sprite = ref();
+let name = ref();
 let id = ref();
 let height = ref();
 let base_experience = ref();
@@ -19,6 +20,7 @@ function searchPokemon() {
   api
     .getPokemonByName(textInput.value.toLowerCase())
     .then((data) => {
+      sprite.value = data.sprites.front_default;
       name.value = data.name;
       id.value = data.id;
       height.value = data.height;
@@ -51,7 +53,7 @@ function searchPokemon() {
 </script>
 
 <template>
-  <h1>Poké Search</h1>
+  <h1 id="title">Poké Search</h1>
 
   <div class="search-container">
     <input type="text" id="search" placeholder="type a pokemon name" />
@@ -59,40 +61,49 @@ function searchPokemon() {
   </div>
 
   <div class="results">
-    <p>name: {{ name }}</p>
-    <p>id: {{ id }}</p>
-    <p>height: {{ height }}</p>
-    <p>base experience: {{ base_experience }}</p>
+    <img :src="sprite" alt="" />
 
-    <p>types:</p>
+    <p class="colored">name:</p>
+    <p>{{ name }}</p>
+
+    <p class="colored">id:</p>
+    <p>{{ id }}</p>
+
+    <p class="colored">height:</p>
+    <p>{{ height }}</p>
+
+    <p class="colored">base experience:</p>
+    <p>{{ base_experience }}</p>
+
+    <p class="colored">types:</p>
     <ol>
       <li v-for="type in types">
         {{ type }}
       </li>
     </ol>
 
-    <p>held items:</p>
+    <p class="colored">held items:</p>
     <ol>
       <li v-for="item in held_items">
         {{ item }}
       </li>
     </ol>
 
-    <p>moves:</p>
+    <p class="colored">moves:</p>
     <ol>
       <li v-for="move in moves">
         {{ move }}
       </li>
     </ol>
 
-    <p>abilities:</p>
+    <p class="colored">abilities:</p>
     <ol>
       <li v-for="ability in abilities">
         {{ ability }}
       </li>
     </ol>
 
-    <p>forms:</p>
+    <p class="colored">forms:</p>
     <ol>
       <li v-for="form in forms">
         {{ form }}

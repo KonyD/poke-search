@@ -26,6 +26,17 @@ a:hover {
 }
 
 body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(249, 212, 212, 0.5704482476584384) 33%,
+    rgba(255, 51, 51, 1) 100%,
+    rgba(255, 51, 51, 1) 158%
+  );
+  text-shadow: -1px 1px 2px #1d235e, 1px 1px 2px #1d235e, 1px -1px 0 #1d235e,
+    -1px -1px 0 #1d235e;
   margin: 0;
   display: flex;
   place-items: center;
@@ -39,20 +50,26 @@ h1 {
   color: yellow;
 }
 
-/*button {
-  height: 40px;
-  text-align: center;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #ff6767;
-  color: #ffffff;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}*/
+img {
+  image-rendering: pixelated;
+  width: 192px;
+  height: 192px;
+}
+
+input[type="text"] {
+  width: 30%;
+  height: 32px;
+  border-radius: 5%;
+  border: none;
+}
+
+button {
+  height: 35px;
+  border-radius: 5%;
+  border: none;
+  margin: 5px;
+}
+
 button:hover {
   border-color: #646cff;
 }
@@ -62,11 +79,19 @@ button:focus-visible {
 }
 
 ol {
-  text-align: left;
+  align-items: start;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.colored {
+  color: #646cff;
 }
 
 .results {
-  text-align: left;
+  text-align: center;
+  align-items: center;
 }
 
 .card {
