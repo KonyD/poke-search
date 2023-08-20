@@ -2,6 +2,8 @@
 
 A pokedex made with [Vue](https://vuejs.org/) using [PokeAPI](https://pokeapi.co/)
 
+![image](https://github.com/KonyD/poke-search/blob/main/src/assets/screenshot.png)
+
 # Running The Project
 
 npm:
