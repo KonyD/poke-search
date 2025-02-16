@@ -1,5 +1,8 @@
 # Poke Search
 
+> [!WARNING]  
+> This repository has been moved to [react-pokedex](https://github.com/KonyD/react-pokedex).
+
 A pokedex made with [Vue](https://vuejs.org/) using [PokeAPI](https://pokeapi.co/)
 
 ![image](https://github.com/KonyD/poke-search/blob/main/src/assets/screenshot.png)
